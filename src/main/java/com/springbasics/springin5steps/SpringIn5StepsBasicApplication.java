@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsBasicApplication {
 
 	//What are the beans that spring has to manage ?
 	//What are the dependencies (sort algo is a dependency of BinarySearchImpl)
@@ -15,7 +15,7 @@ public class SpringIn5StepsApplication {
 	public static void main(String[] args) {
 //		BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm()); //Bean(new QuickSortAlgorithm()) wiring in as a dependency
 		//Get the bean from the ApplicationContext
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		int result = binarySearch.binarySearch(new int[]{12,3,4,1,5}, 3);
 		System.out.println(result);

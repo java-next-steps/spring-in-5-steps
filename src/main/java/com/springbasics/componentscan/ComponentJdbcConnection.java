@@ -1,4 +1,4 @@
-package com.springbasics.springin5steps.scope;
+package com.springbasics.componentscan;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class JdbcConnection {
-    public JdbcConnection(){
+public class ComponentJdbcConnection {
+    public ComponentJdbcConnection(){
         System.out.println("JDBC connection");
     }
 }
