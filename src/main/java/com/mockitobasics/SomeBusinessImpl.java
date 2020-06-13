@@ -8,7 +8,7 @@ public class SomeBusinessImpl {
     }
 
     int findTheGreatestFromAllData(){
-        int greatest = 0;
+        int greatest = Integer.MIN_VALUE;
 
         int[] data = this.dataService.retrieveAllData();
 
